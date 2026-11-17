@@ -12,38 +12,79 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"
         rel="stylesheet">
-  <script type="module" crossorigin src="assets/index-CC6q5n2L.js"></script>
-  <link rel="stylesheet" crossorigin href="assets/index-OCN147cO.css">
+  <script type="module" crossorigin src="assets/portfolio.js"></script>
+  <link rel="stylesheet" crossorigin href="assets/portfolio.css">
 </head>
 
 <body>
     <div id="app">
-        <nav class="navbar">
-            <div class="container">
-                <a href="#" class="logo">AH.</a>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#research">Research</a></li>
-                    <li><a href="#publications">Publications</a></li>
-                    <li><a href="#teaching">Teaching</a></li>
-                    <li><a href="#awards">Awards</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-
-        <main>
-            <section id="hero" class="hero">
+        <a class="skip" href="#main">Skip to content</a>
+        <header id="top"><nav class="container" aria-label="Main navigation">
+            <a class="brand" href="#top"><span class="monogram" aria-hidden="true">AH</span> Anik Hasan</a>
+            <button class="menu" aria-expanded="false" aria-controls="links">Menu ☰</button>
+            <div id="links"><a href="#research">Research</a><a href="#publications">Publications</a><a href="#about">About</a><a href="#teaching">Teaching</a><a class="contact-link" href="#contact">Get in touch ↗</a></div>
+        </nav></header>
+        <main id="main">
+            <section class="hero" aria-labelledby="name"><div class="container hero-grid">
+                <div><p class="eyebrow"><span class="rule"></span> Research portfolio</p>
+                <h1 id="name">Md. Anik<br><em>Hasan.</em></h1>
+                <p class="role">Lecturer &amp; AI Researcher</p>
+                <p class="intro">I study how deep learning and explainable AI can help us understand biomedical signals and medical images.</p>
+                <div class="actions"><a class="primary" href="#research">Explore research <span>↘</span></a><a class="secondary" href="#publications">View publications <span>↗</span></a></div></div>
+                <figure><div class="arch"><img src="assets/anik_hasan-sL8fich8.jpg" alt="Portrait of Md. Anik Hasan"></div>
+                <figcaption>Northern University Bangladesh</figcaption></figure>
+            </div></section>
+            <section id="research" class="research">
                 <div class="container">
-                    <div class="hero-content">
-                        <h1 class="fade-in">Innovating with <span class="accent">Deep Learning & XAI</span></h1>
-                        <p class="subtitle fade-in">Md. Anik Hasan is a Lecturer and Researcher dedicated to advancing
-                            biomedical signal processing and explainable artificial intelligence.</p>
-                        <div class="hero-cta fade-in">
-                            <a href="#publications" class="btn btn-primary">View Research</a>
-                            <a href="#contact" class="btn btn-secondary">Collaborate</a>
+                    <h2 class="section-title">Research experience</h2>
+                    <div class="research-grid">
+                        <div class="research-item glass">
+                            <div class="research-header">
+                                <h3>Cross-Subject Drowsiness Detection (STCT-Net)</h3>
+                                <span class="date">June 2024 – Present</span>
+                            </div>
+                            <p>Architected STCT-Net, a hybrid CNN-Transformer framework with Source-Free Semi-Supervised
+                                Domain Adaptation to mitigate inter-subject variability and ensure data privacy.
+                                Achieved 92.04% accuracy on the SEED-VIG benchmark under a Leave-One-Subject-Out
+                                protocol, significantly outperforming state-of-the-art baselines like EEGNet.</p>
+                        </div>
+
+                        <div class="research-item glass">
+                            <div class="research-header">
+                                <h3>Entropy-Based Lightweight Modeling & Channel Optimization</h3>
+                                <span class="date">July 2023 – Present</span>
+                            </div>
+                            <p class="advisor">Advisors: Dr. Mohammod Abdul Motin</p>
+                            <p>Developed an ultra-lightweight deep learning model (&lt;2.3k parameters) utilizing a
+                                novel fusion of four entropy-based biomarkers to detect drowsiness efficiently.
+                                Implemented a cumulative channel selection algorithm that identified the 17 most
+                                discriminative electrodes, reducing hardware requirements by 43% while maintaining
+                                96.02% accuracy.</p>
+                        </div>
+
+                        <div class="research-item glass">
+                            <div class="research-header">
+                                <h3>Motor Imagery Intention Classification</h3>
+                                <span class="date">Mar 2023 – June 2024</span>
+                            </div>
+                            <p class="advisor">Advisors: Dr. Mohammod Abdul Motin, Dr. Sumaiya Kabir</p>
+                            <p>Designed a robust feature selection pipeline combining Mutual Information for redundancy
+                                reduction and Sequential Forward Floating Selection (SFFS) to optimize signal
+                                classification. Engineered a Dense Neural Network tuned via Keras Tuner, achieving
+                                79.70% accuracy on the BCI Competition 2008-Graz dataset and surpassing standard
+                                PCA-based approaches.</p>
+                        </div>
+
+                        <div class="research-item glass">
+                            <div class="research-header">
+                                <h3>Hybrid Swin Transformer-VGG19 for Brain Tumor Detection</h3>
+                                <span class="date">July 2024 – Present</span>
+                            </div>
+                            <p class="advisor">Advisors: Dr. Md. Khairul Islam</p>
+                            <p>Co-developed a hybrid Swin Transformer-VGG19 framework that integrates global contextual
+                                attention with local spatial features for accurate MRI brain tumor classification.
+                                Integrated Explainable AI modules (Grad-CAM, SHAP) to visualize tumor localization,
+                                achieving 99% accuracy and securing acceptance at ICCIT 2025.</p>
                         </div>
                     </div>
                 </div>
@@ -52,9 +93,6 @@
             <section id="about" class="about">
                 <div class="container">
                     <div class="about-grid">
-                        <div class="about-image glass">
-                            <img src="assets/anik_hasan-sL8fich8.jpg" alt="Md. Anik Hasan">
-                        </div>
                         <div class="about-text">
                             <h2 class="section-title">About Me</h2>
                             <p>My name is <strong>Md. Anik Hasan</strong> and I have completed my Bachelor of Science
@@ -136,62 +174,6 @@
                         <div class="skill-category glass">
                             <h3>Tools & Control</h3>
                             <p>LaTeX, Git, GitHub, VS Code</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="research" class="research">
-                <div class="container">
-                    <h2 class="section-title">Research Experience</h2>
-                    <div class="research-grid">
-                        <div class="research-item glass">
-                            <div class="research-header">
-                                <h3>Cross-Subject Drowsiness Detection (STCT-Net)</h3>
-                                <span class="date">June 2024 – Present</span>
-                            </div>
-                            <p>Architected STCT-Net, a hybrid CNN-Transformer framework with Source-Free Semi-Supervised
-                                Domain Adaptation to mitigate inter-subject variability and ensure data privacy.
-                                Achieved 92.04% accuracy on the SEED-VIG benchmark under a Leave-One-Subject-Out
-                                protocol, significantly outperforming state-of-the-art baselines like EEGNet.</p>
-                        </div>
-
-                        <div class="research-item glass">
-                            <div class="research-header">
-                                <h3>Entropy-Based Lightweight Modeling & Channel Optimization</h3>
-                                <span class="date">July 2023 – Present</span>
-                            </div>
-                            <p class="advisor">Advisors: Dr. Mohammod Abdul Motin</p>
-                            <p>Developed an ultra-lightweight deep learning model (&lt;2.3k parameters) utilizing a
-                                novel fusion of four entropy-based biomarkers to detect drowsiness efficiently.
-                                Implemented a cumulative channel selection algorithm that identified the 17 most
-                                discriminative electrodes, reducing hardware requirements by 43% while maintaining
-                                96.02% accuracy.</p>
-                        </div>
-
-                        <div class="research-item glass">
-                            <div class="research-header">
-                                <h3>Motor Imagery Intention Classification</h3>
-                                <span class="date">Mar 2023 – June 2024</span>
-                            </div>
-                            <p class="advisor">Advisors: Dr. Mohammod Abdul Motin, Dr. Sumaiya Kabir</p>
-                            <p>Designed a robust feature selection pipeline combining Mutual Information for redundancy
-                                reduction and Sequential Forward Floating Selection (SFFS) to optimize signal
-                                classification. Engineered a Dense Neural Network tuned via Keras Tuner, achieving
-                                79.70% accuracy on the BCI Competition 2008-Graz dataset and surpassing standard
-                                PCA-based approaches.</p>
-                        </div>
-
-                        <div class="research-item glass">
-                            <div class="research-header">
-                                <h3>Hybrid Swin Transformer-VGG19 for Brain Tumor Detection</h3>
-                                <span class="date">July 2024 – Present</span>
-                            </div>
-                            <p class="advisor">Advisors: Dr. Md. Khairul Islam</p>
-                            <p>Co-developed a hybrid Swin Transformer-VGG19 framework that integrates global contextual
-                                attention with local spatial features for accurate MRI brain tumor classification.
-                                Integrated Explainable AI modules (Grad-CAM, SHAP) to visualize tumor localization,
-                                achieving 99% accuracy and securing acceptance at ICCIT 2025.</p>
                         </div>
                     </div>
                 </div>
@@ -375,7 +357,7 @@
                             rel="noopener noreferrer">Google Scholar</a>
                         <a href="https://www.linkedin.com/in/md-anik-hasan-816879192" target="_blank"
                             rel="noopener noreferrer">LinkedIn</a>
-                        <a href="#">ResearchGate</a>
+                        <a href="#top">Back to top ↑</a>
                     </div>
                     <p class="copyright">&copy; 2026 Md. Anik Hasan. Built with precision.</p>
                 </div>
